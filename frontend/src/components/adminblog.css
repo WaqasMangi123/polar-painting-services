@@ -1,0 +1,134 @@
+.admin-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus, form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.subheading {
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.subheading input, .subheading textarea {
+  margin-bottom: 10px;
+}
+
+.subheading button {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subheading button:hover {
+  background-color: #e53935;
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.blog-item button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.blog-item button:hover {
+  background-color: #45a049;
+}
+
+.blog-item button:last-child {
+  background-color: #2196F3;
+}
+
+.blog-item button:last-child:hover {
+  background-color: #1976D2;
+}
+
+.blog-item button:nth-child(3) {
+  background-color: #f44336;
+}
+
+.blog-item button:nth-child(3):hover {
+  background-color: #e53935;
+}
+
+.blog-item button:nth-child(4) {
+  background-color: #FF9800;
+}
+
+.blog-item button:nth-child(4):hover {
+  background-color: #FB8C00;
+}
