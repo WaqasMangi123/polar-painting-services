@@ -25,7 +25,7 @@ const AdminBlog = () => {
   const fetchBlogs = async () => {
     try {
       const adminToken = localStorage.getItem('adminToken');
-      const response = await axios.get('http://localhost:5000/api/blogroutes/blogs', {
+      const response = await axios.get('https://polar-painting-services.onrender.com/api/blogroutes/blogs', {
         headers: {
           Authorization: `Bearer ${adminToken}`,
         },
@@ -81,13 +81,13 @@ const AdminBlog = () => {
 
     try {
       if (editMode) {
-        await axios.put(`http://localhost:5000/api/blogroutes/blogs/${editingBlogId}`, formDataObj, {
+        await axios.put(`https://polar-painting-services.onrender.com/api/blogroutes/blogs/${editingBlogId}`, formDataObj, {
           headers: {
             Authorization: `Bearer ${adminToken}`,
           },
         });
       } else {
-        await axios.post('http://localhost:5000/api/blogroutes/blogs', formDataObj, {
+        await axios.post('https://polar-painting-services.onrender.com/api/blogroutes/blogs', formDataObj, {
           headers: {
             Authorization: `Bearer ${adminToken}`,
           },
@@ -122,7 +122,7 @@ const AdminBlog = () => {
   const handleDelete = async (id) => {
     const adminToken = localStorage.getItem('adminToken');
     try {
-      await axios.delete(`http://localhost:5000/api/blogroutes/blogs/${id}`, {
+      await axios.delete(`https://polar-painting-services.onrender.com/api/blogroutes/blogs/${id}`, {
         headers: {
           Authorization: `Bearer ${adminToken}`,
         },
@@ -138,7 +138,7 @@ const AdminBlog = () => {
   const handleLike = async (id) => {
     const adminToken = localStorage.getItem('adminToken');
     try {
-      await axios.put(`http://localhost:5000/api/blogroutes/blogs/${id}/like`, {}, {
+      await axios.put(`https://polar-painting-services.onrender.com/api/blogroutes/blogs/${id}/like`, {}, {
         headers: {
           Authorization: `Bearer ${adminToken}`,
         },
@@ -152,7 +152,7 @@ const AdminBlog = () => {
   const handleView = async (id) => {
     const adminToken = localStorage.getItem('adminToken');
     try {
-      await axios.put(`http://localhost:5000/api/blogroutes/blogs/${id}/view`, {}, {
+      await axios.put(`https://polar-painting-services.onrender.com/api/blogroutes/blogs/${id}/view`, {}, {
         headers: {
           Authorization: `Bearer ${adminToken}`,
         },

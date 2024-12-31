@@ -11,7 +11,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/blogroutes/blogs');
+        const response = await axios.get('https://polar-painting-services.onrender.com/api/blogroutes/blogs');
         setBlogs(response.data);
       } catch (error) {
         console.error('Error fetching blogs:', error);
@@ -32,7 +32,7 @@ const Blog = () => {
   // Handle liking a blog
   const handleLike = async (blogId) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/blogroutes/blogs/${blogId}/like`);
+      const response = await axios.put(`https://polar-painting-services.onrender.com/api/blogroutes/blogs/${blogId}/like`);
       const updatedBlog = response.data;
       // Update the local state with the new likes count
       setBlogs((prevBlogs) =>
