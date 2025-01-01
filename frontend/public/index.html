@@ -24,14 +24,14 @@
     -->
   <title>React App</title>
 </head>
+<script>
+  if (window.location.pathname !== '/') {
+    window.location.href = '/';
+  }
+</script>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <script>
-    if (!window.location.pathname.startsWith('/')) {
-      window.location.href = '/';
-    }
-  </script>
 
 
   <div id="root"></div>
