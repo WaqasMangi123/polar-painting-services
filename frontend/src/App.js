@@ -20,7 +20,7 @@ import AdminBlog from './components/adminblog';
 
 function App() {
   const location = useLocation();
-  
+
   // Admin routes don't need the Navbar and Footer
   const isAdminRoute = location.pathname === '/adminlogin' || location.pathname === '/adminpanel' || location.pathname === '/adminblog';
 
@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       {/* Conditionally render Navbar and Footer based on route */}
       {!isAdminRoute && <Navbar />}  {/* Show Navbar for public routes */}
-      
+
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<Home />} />
@@ -38,12 +38,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/costestimator" element={<CostEstimator />} /> {/* Add Cost Estimator route */}
-        
+
         {/* Admin Routes */}
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/adminpanel" element={<AdminPanel />} />
         <Route path="/adminblog" element={<AdminBlog />} />
-        
+
         {/* Catch-all Route */}
         <Route path="*" element={<Home />} />
       </Routes>
